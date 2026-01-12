@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://420m02x44pis"]
+
+[ext_resource type="Script" uid="uid://bfh5qwu1tb5qj" path="res://Scripts/Flag.gd" id="1_m2mo5"]
+
+[node name="Bandera" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_m2mo5")

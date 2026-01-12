@@ -1,0 +1,153 @@
+[gd_scene load_steps=13 format=3 uid="uid://dm6hag3lx8v4m"]
+
+[ext_resource type="PackedScene" uid="uid://420m02x44pis" path="res://Scenes/Bandera.tscn" id="1_ki3ji"]
+[ext_resource type="Script" uid="uid://brr5plw4amskd" path="res://Scripts/NivelNorteamerica.gd" id="1_n4lw2"]
+[ext_resource type="Texture2D" uid="uid://c125dspjikhgt" path="res://Assets/Norte-America/Mapa-Norte-America.png" id="1_qkr8f"]
+[ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="2_hoxmm"]
+[ext_resource type="Texture2D" uid="uid://d3thuut30k5dn" path="res://Assets/Norte-America/Bandera-Estados-Unidos.svg" id="2_n4lw2"]
+[ext_resource type="Texture2D" uid="uid://dc5efa2jioe8s" path="res://Assets/Norte-America/Bandera-Mexico.svg" id="3_hoxmm"]
+[ext_resource type="Texture2D" uid="uid://kngj7i7ra52h" path="res://Assets/Norte-America/Bandera-Canada.svg" id="4_6q2pb"]
+[ext_resource type="Script" uid="uid://lmdocg6bj6cw" path="res://Scripts/CountryZone.gd" id="6_gqowl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hoxmm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2kcs8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6l1ww"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qlbuq"]
+
+[node name="NivelNorteamerica" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Nivel de Norteamerica"
+script = ExtResource("1_n4lw2")
+
+[node name="TopBar" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 60.0
+
+[node name="TextureRect" type="TextureRect" parent="TopBar/HBoxContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+texture = ExtResource("2_hoxmm")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="ScoreLabel" type="Label" parent="TopBar/HBoxContainer"]
+layout_mode = 2
+text = "Puntaje: 0"
+label_settings = SubResource("LabelSettings_hoxmm")
+
+[node name="Button" type="Button" parent="TopBar/HBoxContainer"]
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 0
+offset_top = 60.0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer"]
+custom_minimum_size = Vector2(427, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSplitContainer/ScrollContainer"]
+layout_direction = 3
+layout_mode = 2
+
+[node name="EstadosUnidos" parent="HSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_ki3ji")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+accessibility_name = "Bandera De Estados Unidos"
+texture = ExtResource("2_n4lw2")
+expand_mode = 1
+stretch_mode = 4
+country_name = "Estados Unidos"
+
+[node name="Mexico" parent="HSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_ki3ji")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+accessibility_name = "Bandera De Mexico"
+texture = ExtResource("3_hoxmm")
+expand_mode = 1
+stretch_mode = 4
+country_name = "Mexico"
+
+[node name="Canada" parent="HSplitContainer/ScrollContainer/VBoxContainer" instance=ExtResource("1_ki3ji")]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+accessibility_name = "Bandera de Canada"
+texture = ExtResource("4_6q2pb")
+expand_mode = 1
+stretch_mode = 4
+country_name = "Canada"
+
+[node name="Mapa" type="Control" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HSplitContainer/Mapa"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 22.0
+offset_right = 792.0
+offset_bottom = 630.0
+accessibility_name = "Mapa del continente de Norteamerica"
+accessibility_live = 1
+texture = ExtResource("1_qkr8f")
+expand_mode = 1
+
+[node name="PanelCanada" type="Panel" parent="HSplitContainer/Mapa"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 209.0
+offset_top = 157.0
+offset_right = 565.0
+offset_bottom = 304.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_2kcs8")
+script = ExtResource("6_gqowl")
+target_country = "Canada"
+
+[node name="PanelEstadosUnidos" type="Panel" parent="HSplitContainer/Mapa"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 196.0
+offset_top = 337.0
+offset_right = 504.0
+offset_bottom = 456.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_6l1ww")
+script = ExtResource("6_gqowl")
+target_country = "Estados Unidos"
+
+[node name="PanelMexico" type="Panel" parent="HSplitContainer/Mapa"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 215.0
+offset_top = 480.0
+offset_right = 374.0
+offset_bottom = 626.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_qlbuq")
+script = ExtResource("6_gqowl")
+target_country = "Mexico"
+
+[connection signal="pressed" from="TopBar/HBoxContainer/Button" to="." method="_on_reset_button_pressed"]
+[connection signal="flag_dropped_correctly" from="HSplitContainer/Mapa/PanelCanada" to="." method="_on_country_zone_flag_dropped_correctly"]
+[connection signal="flag_dropped_correctly" from="HSplitContainer/Mapa/PanelEstadosUnidos" to="." method="_on_country_zone_flag_dropped_correctly"]
+[connection signal="flag_dropped_correctly" from="HSplitContainer/Mapa/PanelMexico" to="." method="_on_country_zone_flag_dropped_correctly"]

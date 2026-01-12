@@ -1,0 +1,47 @@
+# --- Godot 4+ ---
+# Esta es la carpeta más importante para ignorar. 
+# Contiene los recursos importados y caché local.
+.godot/
+
+# Archivos de traducción binarios generados automáticamente (si usas localización)
+*.translation
+
+# --- Exportaciones y Builds ---
+# Ignora las carpetas donde exportas tu juego para evitar subir binarios pesados
+export/
+builds/
+bin/
+
+# --- Mono / C# (.NET) ---
+# Solo relevante si se usa la versión .NET de Godot
+.mono/
+data_*/
+mono_crash.*.json
+.vscode/
+.idea/
+*.sln.DotSettings.user
+
+# --- Android (si se exporta a móvil) ---
+android/build/
+android/.gradle/
+android/app/build/
+android/app/.cxx/
+
+# --- Archivos del Sistema Operativo ---
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# --- Logs y Crash Reports ---
+logs/
+*.log
