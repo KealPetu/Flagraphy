@@ -37,6 +37,7 @@ offset_top = 261.0
 offset_right = 787.0
 offset_bottom = 408.0
 target_country = "Canada"
+final_flag_size = Vector2(100, 40)
 
 [node name="PanelMexico" parent="HSplitContainer/MapContainer" index="2" instance=ExtResource("7_0dfhb")]
 layout_mode = 0

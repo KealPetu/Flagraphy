@@ -3,6 +3,8 @@ extends TextureRect
 @export var country_name: String = "" 
 @export_multiline var alt_text_description: String = "" # Texto extra para TTS: "Bandera de Canadá, hoja de arce roja"
 
+var assigned_voice_id = ""
+
 func _ready():
 	# Detectar entrada del mouse para hover (opcional para usuarios que ven pero necesitan ayuda)
 	mouse_entered.connect(_on_mouse_entered)
@@ -27,4 +29,4 @@ func speak_text(text: String):
 		DisplayServer.tts_stop() # Detiene el audio anterior para no solaparse
 	
 	# El id voice se puede buscar, pero dejarlo vacio usa la voz por defecto del sistema/navegador
-	DisplayServer.tts_speak(text, "")
+	DisplayServer.tts_speak(text, assigned_voice_id)

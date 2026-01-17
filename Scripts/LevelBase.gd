@@ -1,9 +1,9 @@
 class_name LevelBase extends Node2D # class_name permite que otros scripts sepan qué es esto
 
 @export var level_name: String = "Nivel Genérico"
-@onready var flag_container = $HSplitContainer/ScrollContainer/FlagContainer # Ajusta la ruta
-@onready var map_container = $HSplitContainer/MapContainer # Ajusta la ruta
-@onready var puntaje_label = $TopPanel/HBoxContainer/Puntaje # Ajusta la ruta a tu nodo
+@onready var flag_container = $HSplitContainer/ScrollContainer/FlagContainer
+@onready var map_container = $HSplitContainer/MapContainer
+@onready var puntaje_label = $TopPanel/HBoxContainer/Puntaje
 @onready var nivel: Label = $TopPanel/HBoxContainer/Nivel
 
 # Referencia a la escena de la bandera para instanciarla dinámicamente
@@ -12,9 +12,24 @@ var flag_scene = preload("res://Scenes/Flag.tscn")
 var score = 0
 var total_countries = 0
 var score_per_country = 10
+var spanish_voice_id = ""
 
 func _ready():
+	_find_spanish_voice()
 	setup_level()
+
+func _find_spanish_voice():
+	var voices = DisplayServer.tts_get_voices()
+	
+	# Imprimir para depurar (mira la consola para ver qué detecta tu navegador)
+	print("Voces disponibles: ", voices)
+	
+	for voice in voices:
+		# Buscamos cualquier voz que empiece con "es" (es_ES, es_MX, etc.)
+		if voice["language"].begins_with("es"):
+			spanish_voice_id = voice["id"]
+			print("Voz en español seleccionada: ", voice["name"])
+			break
 
 func setup_level():
 	# 1. Buscar todas las "CountryZones" que existen en el mapa
@@ -24,14 +39,12 @@ func setup_level():
 		if node.has_method("_drop_data"): # Verificamos si es una zona de país válida
 			create_flag_for_country(node.target_country)
 			total_countries += 1
-	# Reordenar las banderas aleatoriamente para que no estén en orden
-	randomize_flags()
 
 func create_flag_for_country(country_name: String):
 	var new_flag = flag_scene.instantiate()
 	new_flag.country_name = country_name
+	new_flag.assigned_voice_id = spanish_voice_id
 	
-	# Intentamos cargar la textura dinámicamente si el nombre del archivo coincide
 	# Ejemplo: "Canada" busca "res://Assets/Banderas/Norte America/Canada.svg"
 	var path = "res://Assets/Banderas/" + nivel.text + '/' + country_name + ".svg"
 	if ResourceLoader.exists(path):
@@ -44,15 +57,11 @@ func create_flag_for_country(country_name: String):
 	
 	flag_container.add_child(new_flag)
 
-func randomize_flags():
-	# Obtener hijos y reordenarlos en el contenedor
-	var flags = flag_container.get_children()
-	flags.shuffle()
-	for flag in flags:
-		flag_container.move_child(flag, flag.get_index())
-
 func speak_feedback(text):
-	DisplayServer.tts_speak(text, "")
+	if DisplayServer.tts_is_speaking():
+		DisplayServer.tts_stop()
+	# Pasamos 'spanish_voice_id' como segundo argumento
+	DisplayServer.tts_speak(text, spanish_voice_id)
 
 # Función para conectar desde la interfaz a cada zona
 func _on_country_zone_flag_dropped_correctly():
@@ -66,4 +75,3 @@ func _on_reset_button_pressed():
 func check_win_condition():
 	if score == total_countries * score_per_country: # 3 países x 10 puntos
 		print("¡Nivel Completado!")
-		# Aquí podrías mostrar un popup de victoria
