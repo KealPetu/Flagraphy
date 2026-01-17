@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3thuut30k5dn"
-path="res://.godot/imported/Bandera-Estados-Unidos.svg-0aa7ab020e22f580465db685a41c657a.ctex"
+path="res://.godot/imported/Estados-Unidos.svg-9faf32d68c8f1e12e60f6bb9406aebea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Norte-America/Bandera-Estados-Unidos.svg"
-dest_files=["res://.godot/imported/Bandera-Estados-Unidos.svg-0aa7ab020e22f580465db685a41c657a.ctex"]
+source_file="res://Assets/Banderas/Norte America/Estados-Unidos.svg"
+dest_files=["res://.godot/imported/Estados-Unidos.svg-9faf32d68c8f1e12e60f6bb9406aebea.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kngj7i7ra52h"
-path="res://.godot/imported/Bandera-Canada.svg-fe09bd94deab3dd482bf3f87cc4964cd.ctex"
+path="res://.godot/imported/Canada.svg-bda5170e0e27c8e1695a41038f36f3a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Norte-America/Bandera-Canada.svg"
-dest_files=["res://.godot/imported/Bandera-Canada.svg-fe09bd94deab3dd482bf3f87cc4964cd.ctex"]
+source_file="res://Assets/Banderas/Norte America/Canada.svg"
+dest_files=["res://.godot/imported/Canada.svg-bda5170e0e27c8e1695a41038f36f3a1.ctex"]
 
 [params]
 

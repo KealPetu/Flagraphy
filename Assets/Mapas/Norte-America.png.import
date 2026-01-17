@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c125dspjikhgt"
-path="res://.godot/imported/Mapa-Norte-America.png-153ec7348ac0abf5035c7512ce6cf7da.ctex"
+path="res://.godot/imported/Norte-America.png-8ff2616c65e83bd2aa66e72104be01f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Norte-America/Mapa-Norte-America.png"
-dest_files=["res://.godot/imported/Mapa-Norte-America.png-153ec7348ac0abf5035c7512ce6cf7da.ctex"]
+source_file="res://Assets/Mapas/Norte-America.png"
+dest_files=["res://.godot/imported/Norte-America.png-8ff2616c65e83bd2aa66e72104be01f2.ctex"]
 
 [params]
 

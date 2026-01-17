@@ -4,12 +4,12 @@ extends Panel
 signal flag_dropped_correctly
 
 # Verifica si lo que arrastramos puede soltarse aquí
-func _can_drop_data(at_position, data):
+func _can_drop_data(_at_position, data):
 	# Solo aceptamos si trae datos de país
 	return data.has("country")
 
 # Qué pasa cuando soltamos la bandera
-func _drop_data(at_position, data):
+func _drop_data(_at_position, data):
 	var incoming_country = data["country"]
 	
 	if incoming_country == target_country:

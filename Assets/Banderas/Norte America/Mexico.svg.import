@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc5efa2jioe8s"
-path="res://.godot/imported/Bandera-Mexico.svg-fde06dd966bbbdbac842de6770a5396b.ctex"
+path="res://.godot/imported/Mexico.svg-4227499f86b40a1483153f6d9817e28c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Norte-America/Bandera-Mexico.svg"
-dest_files=["res://.godot/imported/Bandera-Mexico.svg-fde06dd966bbbdbac842de6770a5396b.ctex"]
+source_file="res://Assets/Banderas/Norte America/Mexico.svg"
+dest_files=["res://.godot/imported/Mexico.svg-4227499f86b40a1483153f6d9817e28c.ctex"]
 
 [params]
 

@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://psiwbf4186pk"]
+
+[ext_resource type="Script" uid="uid://c502gmgxtw0mg" path="res://Scripts/LevelBase.gd" id="1_wrhoe"]
+[ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="2_ilmpw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilmpw"]
+
+[node name="LevelBase" type="Node2D"]
+script = ExtResource("1_wrhoe")
+
+[node name="TopPanel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ilmpw")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopPanel"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="LogoJuego" type="TextureRect" parent="TopPanel/HBoxContainer"]
+custom_minimum_size = Vector2(112, 40)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 8
+texture = ExtResource("2_ilmpw")
+expand_mode = 1
+
+[node name="Nivel" type="Label" parent="TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "País Actual"
+
+[node name="BotonRegresar" type="Button" parent="TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+text = "Regresar a Continentes"
+
+[node name="BotonReinicio" type="Button" parent="TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 8
+text = "Reiniciar Nivel"
+
+[node name="Puntaje" type="Label" parent="TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Puntaje: "
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+offset_top = 40.0
+offset_right = 1600.0
+offset_bottom = 900.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+
+[node name="FlagContainer" type="VBoxContainer" parent="HSplitContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="MapContainer" type="Control" parent="HSplitContainer"]
+layout_mode = 2
+
+[node name="MapaTextura" type="TextureRect" parent="HSplitContainer/MapContainer"]
+layout_mode = 0
+
+[connection signal="pressed" from="TopPanel/HBoxContainer/BotonReinicio" to="." method="_on_reset_button_pressed"]

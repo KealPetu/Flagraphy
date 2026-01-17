@@ -1,0 +1,59 @@
+[gd_scene load_steps=4 format=3 uid="uid://sssfb3c83mpt"]
+
+[ext_resource type="PackedScene" uid="uid://psiwbf4186pk" path="res://Scenes/LevelBase.tscn" id="1_3tjb2"]
+[ext_resource type="Texture2D" uid="uid://c125dspjikhgt" path="res://Assets/Mapas/Norte-America.png" id="2_4j6si"]
+[ext_resource type="PackedScene" uid="uid://c4wf0vl8y0i77" path="res://Scenes/PanelPais.tscn" id="7_0dfhb"]
+
+[node name="LevelNorthAmerica" instance=ExtResource("1_3tjb2")]
+
+[node name="TopPanel" parent="." index="0"]
+offset_right = 1600.0
+
+[node name="HBoxContainer" parent="TopPanel" index="0"]
+offset_right = 1600.0
+
+[node name="Nivel" parent="TopPanel/HBoxContainer" index="1"]
+text = "Norte America"
+
+[node name="MapaTextura" parent="HSplitContainer/MapContainer" index="0"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -489.5
+offset_top = -313.0
+offset_right = 489.5
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4j6si")
+
+[node name="PanelCanada" parent="HSplitContainer/MapContainer" index="1" instance=ExtResource("7_0dfhb")]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 261.0
+offset_right = 787.0
+offset_bottom = 408.0
+target_country = "Canada"
+
+[node name="PanelMexico" parent="HSplitContainer/MapContainer" index="2" instance=ExtResource("7_0dfhb")]
+layout_mode = 0
+offset_left = 378.0
+offset_top = 631.0
+offset_right = 439.0
+offset_bottom = 700.0
+target_country = "Mexico"
+
+[node name="PanelEstadosUnidor" parent="HSplitContainer/MapContainer" index="3" instance=ExtResource("7_0dfhb")]
+layout_mode = 0
+offset_left = 303.0
+offset_top = 409.0
+offset_right = 543.0
+offset_bottom = 567.0
+target_country = "Estados-Unidos"
+
+[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelCanada" to="." method="_on_country_zone_flag_dropped_correctly"]
+[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelMexico" to="." method="_on_country_zone_flag_dropped_correctly"]
+[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelEstadosUnidor" to="." method="_on_country_zone_flag_dropped_correctly"]
