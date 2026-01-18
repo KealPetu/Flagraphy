@@ -67,6 +67,3 @@ target_country = "Estados-Unidos"
 
 [connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonRegresar" to="." method="_on_boton_regresar_mouse_entered"]
 [connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonReinicio" to="." method="_on_boton_reinicio_mouse_entered"]
-[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelCanada" to="." method="_on_country_zone_flag_dropped_correctly"]
-[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelMexico" to="." method="_on_country_zone_flag_dropped_correctly"]
-[connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelEstadosUnidor" to="." method="_on_country_zone_flag_dropped_correctly"]

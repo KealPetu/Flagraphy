@@ -5,18 +5,30 @@ extends TextureRect
 
 var assigned_voice_id = ""
 
+# Referencia al Nivel para avisar que me hicieron clic
+# (Lo asignaremos al crear la bandera dinámicamente)
+var level_manager = null
+
 func _ready():
 	# Detectar entrada del mouse para hover (opcional para usuarios que ven pero necesitan ayuda)
 	mouse_entered.connect(_on_mouse_entered)
 
-func _get_drag_data(_at_position):
-	# --- ACCESIBILIDAD ---
-	# Leer el nombre al empezar a arrastrar
-	speak_text("Arrastrando bandera de " + country_name)
-	# ---------------------
-	var preview = TextureRect.new()
-	preview.texture = texture
-	return { "source_node": self, "country": country_name }
+func _gui_input(event):
+	# Detectar clic izquierdo
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		if level_manager:
+			level_manager.on_flag_clicked(self)
+
+# --- FEEDBACK VISUAL ---
+func select_visuals():
+	# Opción A: Cambiar color (Modulate)
+	modulate = Color(1.2, 1.2, 1.2) # La hace brillar
+	# Opción B: Si tienes un nodo "ReferenceRect" como borde, hazlo visible
+	# $Border.visible = true
+
+func deselect_visuals():
+	modulate = Color(1, 1, 1) # Vuelve a color normal
+	# $Border.visible = false
 
 func _on_mouse_entered():
 	# Opcional: Leer al pasar el mouse por encima
