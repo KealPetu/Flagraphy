@@ -145,6 +145,3 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_aw1t8")
 
 [node name="MapaTextura" type="TextureRect" parent="HSplitContainer/MapContainer"]
 layout_mode = 0
-
-[connection signal="pressed" from="TopPanel/HBoxContainer/BotonReinicio" to="." method="_on_reset_button_pressed"]
-[connection signal="mouse_entered" from="HSplitContainer/MapContainer/MapaTextura" to="." method="_on_mapa_textura_mouse_entered"]

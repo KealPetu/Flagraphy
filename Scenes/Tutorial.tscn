@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7bloo")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ImagenTutorial" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 2666.6665
 offset_bottom = 1593.3333

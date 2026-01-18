@@ -45,3 +45,5 @@ Desktop.ini
 # --- Logs y Crash Reports ---
 logs/
 *.log
+
+docs/*.import

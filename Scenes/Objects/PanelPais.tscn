@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c4wf0vl8y0i77"]
 
-[ext_resource type="Script" uid="uid://lmdocg6bj6cw" path="res://Scripts/CountryZone.gd" id="1_2rnp5"]
+[ext_resource type="Script" uid="uid://lmdocg6bj6cw" path="res://Scripts/PanelPais.gd" id="1_2rnp5"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2rnp5"]
 

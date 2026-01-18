@@ -6,6 +6,8 @@ class_name LevelBase extends Control # class_name permite que otros scripts sepa
 @onready var puntaje_label = $TopPanel/HBoxContainer/Puntaje
 @onready var nivel_label: Label = $TopPanel/HBoxContainer/Nivel
 @onready var boton_regresar: Button = $TopPanel/HBoxContainer/BotonRegresar
+@onready var boton_reinicio: Button = $TopPanel/HBoxContainer/BotonReinicio
+
 
 # Referencia a la escena de la bandera para instanciarla dinámicamente
 var flag_scene = preload("res://Scenes/Objects/Flag.tscn")
@@ -24,7 +26,16 @@ func _ready():
 	setup_level()
 	max_score = POINTS_PER_COUNTRY * total_countries
 	puntaje_label.text = str(score) + "/" + str(max_score)
+	
+	# Conexion de Señales
+	# Control de escenas
 	boton_regresar.pressed.connect(cambiar_escena_menu_seleccion)
+	boton_reinicio.pressed.connect(_on_reset_button_pressed)
+	
+	# Control TTS
+	boton_regresar.focus_entered.connect(_on_boton_regresar_focus_entered)
+	boton_reinicio.focus_entered.connect(_on_boton_reinicio_focus_entered)
+	map_container.focus_entered.connect(_on_map_container_focused)
 
 func _find_spanish_voice():
 	var voices = DisplayServer.tts_get_voices()
@@ -83,13 +94,13 @@ func check_win_condition():
 func _on_reset_button_pressed():
 	get_tree().reload_current_scene() # Reinicia el nivel
 
-func _on_boton_regresar_mouse_entered() -> void:
+func _on_boton_regresar_focus_entered() -> void:
 	speak_feedback("Botón de regresar")
 
-func _on_boton_reinicio_mouse_entered() -> void:
+func _on_boton_reinicio_focus_entered() -> void:
 	speak_feedback("Botón de reinicio")
 
-func _on_mapa_textura_mouse_entered() -> void:
+func _on_map_container_focused() -> void:
 	speak_feedback(map_container.accessibility_name)
 
 func cambiar_escena_menu_seleccion():

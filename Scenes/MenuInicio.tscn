@@ -56,7 +56,7 @@ offset_bottom = 244.0
 grow_horizontal = 2
 texture = ExtResource("3_bt1tr")
 
-[node name="Button" type="Button" parent="."]
+[node name="BotonInicio" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -78,5 +78,3 @@ theme_override_styles/normal = ExtResource("4_8kh3b")
 theme_override_styles/pressed = ExtResource("5_vtrnu")
 theme_override_styles/hover = ExtResource("4_8kh3b")
 text = "▶︎ Jugar"
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

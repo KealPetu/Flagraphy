@@ -1,7 +1,11 @@
 extends Control
 
-var scene_to_load = "res://Scenes/MenuPrincipal.tscn" 
+var escena_menu_principal = "res://Scenes/MenuPrincipal.tscn" 
+@onready var boton_inicio: Button = $BotonInicio
 
-func _on_button_pressed():
+func _ready() -> void:
+	boton_inicio.pressed.connect(cambiar_escena_menu_principal)
+
+func cambiar_escena_menu_principal():
 	# Esta función cambia la escena actual por la nueva y borra la anterior de la memoria
-	get_tree().change_scene_to_file(scene_to_load)
+	get_tree().change_scene_to_file(escena_menu_principal)

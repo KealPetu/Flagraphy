@@ -1,4 +1,4 @@
-class_name MenuPrincipal extends Control
+extends Control
 
 @onready var nombre_line_edit: LineEdit = $Opciones/NombreLineEdit
 @onready var lista_modos: OptionButton = $Opciones/ListaModos
