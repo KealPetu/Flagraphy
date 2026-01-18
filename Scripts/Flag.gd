@@ -20,7 +20,7 @@ func _get_drag_data(_at_position):
 
 func _on_mouse_entered():
 	# Opcional: Leer al pasar el mouse por encima
-	# speak_text(country_name) 
+	speak_text(country_name) 
 	pass
 
 func speak_text(text: String):
@@ -28,5 +28,4 @@ func speak_text(text: String):
 	if DisplayServer.tts_is_speaking():
 		DisplayServer.tts_stop() # Detiene el audio anterior para no solaparse
 	
-	# El id voice se puede buscar, pero dejarlo vacio usa la voz por defecto del sistema/navegador
 	DisplayServer.tts_speak(text, assigned_voice_id)

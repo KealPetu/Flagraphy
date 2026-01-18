@@ -47,5 +47,11 @@ func _drop_data(_at_position, data):
 		# Emitir señal
 		flag_dropped_correctly.emit()
 	else:
-		# Opcional: Feedback visual de error (ej. parpadeo rojo)
-		print("Incorrecto")
+		speak_feedback("Incorrecto")
+		
+func speak_feedback(text: String):
+	# Verifica si el sistema soporta TTS
+	if DisplayServer.tts_is_speaking():
+		DisplayServer.tts_stop() # Detiene el audio anterior para no solaparse
+	
+	DisplayServer.tts_speak(text, "")

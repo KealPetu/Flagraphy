@@ -67,6 +67,10 @@ func speak_feedback(text):
 	# Pasamos 'spanish_voice_id' como segundo argumento
 	DisplayServer.tts_speak(text, spanish_voice_id)
 
+func check_win_condition():
+	if score == max_score: # 3 países x 10 puntos
+		print("¡Nivel Completado!")
+
 # Función para conectar desde la interfaz a cada zona
 func _on_country_zone_flag_dropped_correctly():
 	score += 10
@@ -76,6 +80,11 @@ func _on_country_zone_flag_dropped_correctly():
 func _on_reset_button_pressed():
 	get_tree().reload_current_scene() # Reinicia el nivel
 
-func check_win_condition():
-	if score == max_score: # 3 países x 10 puntos
-		print("¡Nivel Completado!")
+func _on_boton_regresar_mouse_entered() -> void:
+	speak_feedback("Botón de regresar")
+
+func _on_boton_reinicio_mouse_entered() -> void:
+	speak_feedback("Botón de reinicio")
+
+func _on_mapa_textura_mouse_entered() -> void:
+	speak_feedback(map_container.accessibility_name)

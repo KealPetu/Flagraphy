@@ -20,6 +20,9 @@ text = ""
 dragging_enabled = false
 dragger_visibility = 2
 
+[node name="MapContainer" parent="HSplitContainer" index="1"]
+accessibility_name = "Mapa de Norte America"
+
 [node name="MapaTextura" parent="HSplitContainer/MapContainer" index="0"]
 layout_mode = 1
 anchors_preset = 8
@@ -62,6 +65,8 @@ offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_77rsg")
 target_country = "Estados-Unidos"
 
+[connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonRegresar" to="." method="_on_boton_regresar_mouse_entered"]
+[connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonReinicio" to="." method="_on_boton_reinicio_mouse_entered"]
 [connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelCanada" to="." method="_on_country_zone_flag_dropped_correctly"]
 [connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelMexico" to="." method="_on_country_zone_flag_dropped_correctly"]
 [connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelEstadosUnidor" to="." method="_on_country_zone_flag_dropped_correctly"]

@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvdl00w5f18i"]
+
+[ext_resource type="Texture2D" uid="uid://deahqm81a21k2" path="res://Assets/Misc/Planeta.png" id="1_3k1ur"]
+[ext_resource type="Script" uid="uid://cvsvwiajidpkk" path="res://Scripts/MenuInicio.gd" id="1_vtrnu"]
+[ext_resource type="Texture2D" uid="uid://b2simqf42yhrw" path="res://Assets/Misc/Fondo.png" id="2_wvohi"]
+[ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="3_bt1tr"]
+[ext_resource type="StyleBox" uid="uid://d0qdfpckdn77k" path="res://Assets/Estilos/Botones/BotonReinicio/Normal.tres" id="4_8kh3b"]
+[ext_resource type="StyleBox" uid="uid://b8rqab8v7h7m5" path="res://Assets/Estilos/Botones/BotonReinicio/Hover-Pressed.tres" id="5_vtrnu"]
+
+[node name="MenuInicio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vtrnu")
+
+[node name="Planeta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -267.0
+offset_top = 656.00006
+offset_right = 2233.0
+offset_bottom = 3156.0
+rotation = -0.36651915
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_3k1ur")
+
+[node name="Fondo" type="TextureRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.49019608)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -296.60498
+offset_right = 512.0
+offset_bottom = 727.395
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(512, 512)
+texture = ExtResource("2_wvohi")
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -313.0
+offset_top = 20.0
+offset_right = 313.0006
+offset_bottom = 244.0
+grow_horizontal = 2
+texture = ExtResource("3_bt1tr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -33.0
+offset_top = -133.0
+offset_right = 33.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("4_8kh3b")
+theme_override_styles/pressed = ExtResource("5_vtrnu")
+theme_override_styles/hover = ExtResource("4_8kh3b")
+text = "▶︎ Jugar"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

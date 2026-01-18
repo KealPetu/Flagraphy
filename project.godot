@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Flagraphy"
-run/main_scene="uid://sssfb3c83mpt"
+run/main_scene="uid://bvdl00w5f18i"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="uid://ctmydbo0736gc"
 

@@ -1,0 +1,274 @@
+[gd_scene load_steps=13 format=3 uid="uid://gtrphdsby76q"]
+
+[ext_resource type="Texture2D" uid="uid://deahqm81a21k2" path="res://Assets/Misc/Planeta.png" id="1_3k1ur"]
+[ext_resource type="Texture2D" uid="uid://bnlani5kr1hyb" path="res://Assets/Misc/buho.png" id="2_bt1tr"]
+[ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="3_bt1tr"]
+[ext_resource type="Texture2D" uid="uid://b7j6kxmkhhngf" path="res://Assets/Misc/nubes.png" id="3_l10t8"]
+[ext_resource type="StyleBox" uid="uid://d0qdfpckdn77k" path="res://Assets/Estilos/Botones/BotonReinicio/Normal.tres" id="4_8kh3b"]
+[ext_resource type="StyleBox" uid="uid://b8rqab8v7h7m5" path="res://Assets/Estilos/Botones/BotonReinicio/Hover-Pressed.tres" id="5_vtrnu"]
+[ext_resource type="StyleBox" uid="uid://bvnp5be7v7sty" path="res://Assets/Estilos/Botones/BotonRegresar/Normal.tres" id="7_pkrck"]
+[ext_resource type="StyleBox" uid="uid://oooigrg4cs3f" path="res://Assets/Estilos/Botones/BotonRegresar/Pressed.tres" id="8_qovuk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l10t8"]
+bg_color = Color(0.9019608, 0.8627451, 0.5882353, 1)
+corner_radius_bottom_left = 50
+expand_margin_left = 25.0
+expand_margin_bottom = 25.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kh3b"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkrck"]
+bg_color = Color(0.9498039, 0.8576126, 0.35690963, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l10t8"]
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 49.0
+offset_top = -11.0
+offset_right = 49.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+offset_left = 30.0
+offset_right = 656.0
+offset_bottom = 224.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bt1tr")
+
+[node name="Nubes" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 682.0
+offset_right = 1392.0
+offset_bottom = 1032.0
+texture = ExtResource("3_l10t8")
+
+[node name="Planeta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -267.0
+offset_top = 565.0
+offset_right = 2233.0
+offset_bottom = 3065.0
+rotation = -0.36651915
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_3k1ur")
+
+[node name="Buho" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 996.0
+offset_top = 331.00006
+offset_right = 2020.0
+offset_bottom = 1355.0
+rotation = -0.20071286
+scale = Vector2(0.6, 0.6)
+pivot_offset = Vector2(512, 512)
+texture = ExtResource("2_bt1tr")
+flip_h = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -902.0
+offset_bottom = 114.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.19607843)
+theme_override_constants/line_spacing = 10
+theme_override_constants/paragraph_spacing = 5
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_l10t8")
+text = "Explora Continentes, descubre países y datos curiosos.
+¡Demuestra qué tan bien conoces el mundo..bandera por bandera!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Opciones" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_top = -100.0
+offset_right = 39.999985
+offset_bottom = -60.0
+pivot_offset = Vector2(800, 600)
+
+[node name="SeccionNombre" type="Control" parent="Opciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 780.0
+offset_top = 430.0
+offset_right = 780.0
+offset_bottom = 430.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NombreLabel" type="Label" parent="Opciones/SeccionNombre"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -23.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Nombre"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NombreLineEdit" type="LineEdit" parent="Opciones/SeccionNombre"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_right = 250.0
+offset_bottom = 70.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_placeholder_color = Color(0.2885176, 0.2885182, 0.2885177, 0.6)
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_8kh3b")
+placeholder_text = "Ingresa tu nombre..."
+alignment = 1
+
+[node name="SeccionModoJuego" type="Control" parent="Opciones"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 780.0
+offset_top = 580.0
+offset_right = 780.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ModoJuegoLabel" type="Label" parent="Opciones/SeccionModoJuego"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -71.5
+offset_top = -50.0
+offset_right = 71.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Modo de Juego"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemList" type="ItemList" parent="Opciones/SeccionModoJuego"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.19434935, 0.19434926, 0.19434917, 1)
+theme_override_colors/font_hovered_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hovered_selected_color = Color(0, 0, 0, 1)
+theme_override_colors/font_selected_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/panel = SubResource("StyleBoxFlat_pkrck")
+item_count = 2
+item_0/text = "Por continentes"
+item_1/text = "Todo el mundo"
+
+[node name="BotonJugar" type="Button" parent="Opciones"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 630.0
+offset_top = 710.0
+offset_right = 930.00024
+offset_bottom = 770.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("4_8kh3b")
+theme_override_styles/pressed = ExtResource("5_vtrnu")
+theme_override_styles/hover = ExtResource("4_8kh3b")
+text = "Jugar"
+
+[node name="BotonConfiguraciones" type="Button" parent="Opciones"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 630.0
+offset_top = 810.0
+offset_right = 930.0
+offset_bottom = 870.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("7_pkrck")
+theme_override_styles/pressed = ExtResource("8_qovuk")
+theme_override_styles/hover = ExtResource("7_pkrck")
+text = "Configuraciones"
+
+[node name="ButtonComoJugar" type="Button" parent="Opciones"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 680.0
+offset_top = 910.0
+offset_right = 880.0
+offset_bottom = 945.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l10t8")
+text = "¿Cómo Jugar?"
