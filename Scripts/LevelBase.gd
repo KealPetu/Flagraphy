@@ -1,13 +1,15 @@
-class_name LevelBase extends Node2D # class_name permite que otros scripts sepan qué es esto
+class_name LevelBase extends Control # class_name permite que otros scripts sepan qué es esto
 
 @export var level_name: String = "Nivel Genérico"
 @onready var flag_container = $HSplitContainer/ScrollContainer/FlagContainer
 @onready var map_container = $HSplitContainer/MapContainer
 @onready var puntaje_label = $TopPanel/HBoxContainer/Puntaje
 @onready var nivel_label: Label = $TopPanel/HBoxContainer/Nivel
+@onready var boton_regresar: Button = $TopPanel/HBoxContainer/BotonRegresar
 
 # Referencia a la escena de la bandera para instanciarla dinámicamente
-var flag_scene = preload("res://Scenes/Objects/Flag.tscn") 
+var flag_scene = preload("res://Scenes/Objects/Flag.tscn")
+const MENU_SELECCION = "res://Scenes/MenuSeleccion.tscn"
 
 const POINTS_PER_COUNTRY = 10
 var score = 0
@@ -21,6 +23,7 @@ func _ready():
 	setup_level()
 	max_score = POINTS_PER_COUNTRY * total_countries
 	puntaje_label.text = str(score) + "/" + str(max_score)
+	boton_regresar.pressed.connect(cambiar_escena_menu_seleccion)
 
 func _find_spanish_voice():
 	var voices = DisplayServer.tts_get_voices()
@@ -88,3 +91,7 @@ func _on_boton_reinicio_mouse_entered() -> void:
 
 func _on_mapa_textura_mouse_entered() -> void:
 	speak_feedback(map_container.accessibility_name)
+
+func cambiar_escena_menu_seleccion():
+	get_tree().change_scene_to_file(MENU_SELECCION)
+	pass

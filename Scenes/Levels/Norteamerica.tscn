@@ -10,7 +10,7 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77rsg"]
 
-[node name="LevelNorthAmerica" instance=ExtResource("1_3tjb2")]
+[node name="LevelNorteAmerica" instance=ExtResource("1_3tjb2")]
 level_name = "Norte America"
 
 [node name="Nivel" parent="TopPanel/HBoxContainer" index="1"]

@@ -51,10 +51,13 @@ corner_radius_top_right = 50
 corner_radius_bottom_right = 50
 corner_radius_bottom_left = 50
 
-[node name="LevelBase" type="Node2D"]
+[node name="LevelBase" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_wrhoe")
 
 [node name="TopPanel" type="Panel" parent="."]
+layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 75.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ilmpw")
@@ -121,6 +124,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
+layout_mode = 0
 offset_top = 150.0
 offset_right = 1600.0
 offset_bottom = 900.0
