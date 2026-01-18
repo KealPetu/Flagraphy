@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://bofsuquv720w7"]
+
+[ext_resource type="Texture2D" uid="uid://bnlani5kr1hyb" path="res://Assets/Misc/buho.png" id="1_28310"]
+[ext_resource type="Script" uid="uid://c0hprxaq7bf4a" path="res://Scripts/Configuraciones.gd" id="1_knh8s"]
+[ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="2_2nry1"]
+[ext_resource type="Texture2D" uid="uid://deahqm81a21k2" path="res://Assets/Misc/Planeta.png" id="3_xjga3"]
+
+[node name="Configuraciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_knh8s")
+
+[node name="Buho" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 787.0
+offset_top = 355.00006
+offset_right = 1811.0
+offset_bottom = 1379.0
+rotation = -0.3403392
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(512, 512)
+texture = ExtResource("1_28310")
+flip_h = true
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -313.0
+offset_top = 20.0
+offset_right = 313.0
+offset_bottom = 244.0
+grow_horizontal = 2
+scale = Vector2(0.75, 0.75)
+pivot_offset = Vector2(313, 112)
+texture = ExtResource("2_2nry1")
+
+[node name="Planeta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 348.0
+offset_top = -1238.0
+offset_right = 2848.0
+offset_bottom = 1262.0
+rotation = -2.3561945
+scale = Vector2(0.25, 0.25)
+pivot_offset = Vector2(1250, 1250)
+texture = ExtResource("3_xjga3")
+
+[node name="ContenedorOpciones" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -504.5
+offset_top = -232.0
+offset_right = 504.5
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="LabelVolumen" type="Label" parent="ContenedorOpciones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Volumen"
+
+[node name="HSliderVolumen" type="HSlider" parent="ContenedorOpciones"]
+layout_mode = 2
+value = 50.0
+
+[node name="CheckBoxTTS" type="CheckBox" parent="ContenedorOpciones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+text = "Habilitar TTS"
+
+[node name="HSeparator" type="HSeparator" parent="ContenedorOpciones"]
+custom_minimum_size = Vector2(0, 68.54)
+layout_mode = 2
+
+[node name="CheckBoxDaltonismo" type="CheckBox" parent="ContenedorOpciones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+text = "Habilitar opciones 
+de daltonismo"
+
+[node name="OpcionesDaltonismo" type="OptionButton" parent="ContenedorOpciones"]
+layout_mode = 2
+
+[node name="LabelIntensidad" type="Label" parent="ContenedorOpciones"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Intensidad:"
+
+[node name="HSliderIntensidadDaltonismo" type="HSlider" parent="ContenedorOpciones"]
+layout_mode = 2
+max_value = 1.0
+step = 0.1
+
+[node name="BotonRegresar" type="Button" parent="ContenedorOpciones"]
+layout_mode = 2
+text = "Regresar"

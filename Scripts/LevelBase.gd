@@ -7,7 +7,7 @@ class_name LevelBase extends Node2D # class_name permite que otros scripts sepan
 @onready var nivel_label: Label = $TopPanel/HBoxContainer/Nivel
 
 # Referencia a la escena de la bandera para instanciarla dinámicamente
-var flag_scene = preload("res://Scenes/Flag.tscn") 
+var flag_scene = preload("res://Scenes/Objects/Flag.tscn") 
 
 const POINTS_PER_COUNTRY = 10
 var score = 0

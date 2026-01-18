@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://sssfb3c83mpt"]
 
-[ext_resource type="PackedScene" uid="uid://psiwbf4186pk" path="res://Scenes/LevelBase.tscn" id="1_3tjb2"]
+[ext_resource type="PackedScene" uid="uid://psiwbf4186pk" path="res://Scenes/Objects/LevelBase.tscn" id="1_3tjb2"]
 [ext_resource type="Texture2D" uid="uid://c125dspjikhgt" path="res://Assets/Mapas/Norte-America.png" id="2_4j6si"]
-[ext_resource type="PackedScene" uid="uid://c4wf0vl8y0i77" path="res://Scenes/PanelPais.tscn" id="7_0dfhb"]
+[ext_resource type="PackedScene" uid="uid://c4wf0vl8y0i77" path="res://Scenes/Objects/PanelPais.tscn" id="7_0dfhb"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1no5j"]
 

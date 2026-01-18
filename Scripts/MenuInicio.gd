@@ -1,6 +1,6 @@
 extends Control
 
-var scene_to_load = "res://Scenes/Levels/LevelNorthAmerica.tscn" 
+var scene_to_load = "res://Scenes/MenuPrincipal.tscn" 
 
 func _on_button_pressed():
 	# Esta función cambia la escena actual por la nueva y borra la anterior de la memoria
