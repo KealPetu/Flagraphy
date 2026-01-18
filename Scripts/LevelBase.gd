@@ -4,19 +4,23 @@ class_name LevelBase extends Node2D # class_name permite que otros scripts sepan
 @onready var flag_container = $HSplitContainer/ScrollContainer/FlagContainer
 @onready var map_container = $HSplitContainer/MapContainer
 @onready var puntaje_label = $TopPanel/HBoxContainer/Puntaje
-@onready var nivel: Label = $TopPanel/HBoxContainer/Nivel
+@onready var nivel_label: Label = $TopPanel/HBoxContainer/Nivel
 
 # Referencia a la escena de la bandera para instanciarla dinámicamente
 var flag_scene = preload("res://Scenes/Flag.tscn") 
 
+const POINTS_PER_COUNTRY = 10
 var score = 0
+var max_score = 0
 var total_countries = 0
-var score_per_country = 10
 var spanish_voice_id = ""
 
 func _ready():
+	nivel_label.text = level_name
 	_find_spanish_voice()
 	setup_level()
+	max_score = POINTS_PER_COUNTRY * total_countries
+	puntaje_label.text = str(score) + "/" + str(max_score)
 
 func _find_spanish_voice():
 	var voices = DisplayServer.tts_get_voices()
@@ -46,7 +50,7 @@ func create_flag_for_country(country_name: String):
 	new_flag.assigned_voice_id = spanish_voice_id
 	
 	# Ejemplo: "Canada" busca "res://Assets/Banderas/Norte America/Canada.svg"
-	var path = "res://Assets/Banderas/" + nivel.text + '/' + country_name + ".svg"
+	var path = "res://Assets/Banderas/" + level_name + '/' + country_name + ".svg"
 	if ResourceLoader.exists(path):
 		new_flag.texture = load(path)	
 	else:
@@ -66,12 +70,12 @@ func speak_feedback(text):
 # Función para conectar desde la interfaz a cada zona
 func _on_country_zone_flag_dropped_correctly():
 	score += 10
-	puntaje_label.text = "Puntaje: " + str(score)
+	puntaje_label.text = str(score) + "/" + str(max_score)
 	check_win_condition()
 
 func _on_reset_button_pressed():
 	get_tree().reload_current_scene() # Reinicia el nivel
 
 func check_win_condition():
-	if score == total_countries * score_per_country: # 3 países x 10 puntos
+	if score == max_score: # 3 países x 10 puntos
 		print("¡Nivel Completado!")

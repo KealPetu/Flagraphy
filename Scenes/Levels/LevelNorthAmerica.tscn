@@ -1,19 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://sssfb3c83mpt"]
+[gd_scene load_steps=7 format=3 uid="uid://sssfb3c83mpt"]
 
 [ext_resource type="PackedScene" uid="uid://psiwbf4186pk" path="res://Scenes/LevelBase.tscn" id="1_3tjb2"]
 [ext_resource type="Texture2D" uid="uid://c125dspjikhgt" path="res://Assets/Mapas/Norte-America.png" id="2_4j6si"]
 [ext_resource type="PackedScene" uid="uid://c4wf0vl8y0i77" path="res://Scenes/PanelPais.tscn" id="7_0dfhb"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1no5j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pbwyq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77rsg"]
+
 [node name="LevelNorthAmerica" instance=ExtResource("1_3tjb2")]
-
-[node name="TopPanel" parent="." index="0"]
-offset_right = 1600.0
-
-[node name="HBoxContainer" parent="TopPanel" index="0"]
-offset_right = 1600.0
+level_name = "Norte America"
 
 [node name="Nivel" parent="TopPanel/HBoxContainer" index="1"]
-text = "Norte America"
+text = ""
+
+[node name="HSplitContainer" parent="." index="1"]
+dragging_enabled = false
+dragger_visibility = 2
 
 [node name="MapaTextura" parent="HSplitContainer/MapContainer" index="0"]
 layout_mode = 1
@@ -32,27 +37,29 @@ texture = ExtResource("2_4j6si")
 
 [node name="PanelCanada" parent="HSplitContainer/MapContainer" index="1" instance=ExtResource("7_0dfhb")]
 layout_mode = 0
-offset_left = 297.0
-offset_top = 261.0
-offset_right = 787.0
-offset_bottom = 408.0
+offset_left = 316.0
+offset_top = 200.0
+offset_right = 806.0
+offset_bottom = 347.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1no5j")
 target_country = "Canada"
-final_flag_size = Vector2(100, 40)
 
 [node name="PanelMexico" parent="HSplitContainer/MapContainer" index="2" instance=ExtResource("7_0dfhb")]
 layout_mode = 0
-offset_left = 378.0
-offset_top = 631.0
-offset_right = 439.0
-offset_bottom = 700.0
+offset_left = 374.0
+offset_top = 571.0
+offset_right = 435.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_pbwyq")
 target_country = "Mexico"
 
 [node name="PanelEstadosUnidor" parent="HSplitContainer/MapContainer" index="3" instance=ExtResource("7_0dfhb")]
 layout_mode = 0
-offset_left = 303.0
-offset_top = 409.0
-offset_right = 543.0
-offset_bottom = 567.0
+offset_left = 298.0
+offset_top = 377.0
+offset_right = 599.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_77rsg")
 target_country = "Estados-Unidos"
 
 [connection signal="flag_dropped_correctly" from="HSplitContainer/MapContainer/PanelCanada" to="." method="_on_country_zone_flag_dropped_correctly"]

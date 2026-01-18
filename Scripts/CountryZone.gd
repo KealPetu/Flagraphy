@@ -1,7 +1,6 @@
 extends Panel
 
 @export var target_country: String = "" # Ejemplo: "Canada"
-@export var final_flag_size: Vector2 = Vector2(64, 40)
 signal flag_dropped_correctly
 # Verifica si lo que arrastramos puede soltarse aquí
 func _can_drop_data(_at_position, data):
@@ -28,8 +27,15 @@ func _drop_data(_at_position, data):
 		flag.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED # Mantiene la proporción sin deformar
 		
 		# 3. Aplicar el nuevo tamaño
-		flag.size = final_flag_size
-		flag.custom_minimum_size = final_flag_size # Forzamos el tamaño mínimo también por seguridad
+		if (size.x >= size.y):
+			flag.size.y = size.y
+			flag.custom_minimum_size.y = size.y
+		else:
+			flag.size.x = size.x
+			flag.custom_minimum_size.x = size.x
+		
+		#flag.size = final_flag_size
+		#flag.custom_minimum_size = final_flag_size # Forzamos el tamaño mínimo también por seguridad
 		
 		# 4. Centrar la bandera dentro del Panel
 		# Esta función mágica de Godot 4 centra el objeto basándose en el tamaño del padre
