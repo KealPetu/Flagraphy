@@ -128,7 +128,6 @@ layout_mode = 0
 offset_top = 150.0
 offset_right = 1600.0
 offset_bottom = 900.0
-dragging_enabled = false
 
 [node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer"]
 custom_minimum_size = Vector2(400, 0)

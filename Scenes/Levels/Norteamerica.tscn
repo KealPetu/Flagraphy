@@ -64,3 +64,6 @@ offset_right = 599.0
 offset_bottom = 504.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_77rsg")
 target_country = "Estados-Unidos"
+
+[connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonRegresar" to="." method="_on_boton_regresar_mouse_entered"]
+[connection signal="mouse_entered" from="TopPanel/HBoxContainer/BotonReinicio" to="." method="_on_boton_reinicio_mouse_entered"]
