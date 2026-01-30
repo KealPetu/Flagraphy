@@ -2,12 +2,7 @@ extends Control
 
 @onready var boton_regresar: Button = $BotonRegresar
 @onready var boton_norteamerica: Button = $ContenedorBotones/ContenedorBotonesAmericas/BotonNorteamerica
-@onready var boton_centroamerica: Button = $ContenedorBotones/ContenedorBotonesAmericas/BotonCentroamerica
 @onready var boton_sudamerica: Button = $ContenedorBotones/ContenedorBotonesAmericas/BotonSudamerica
-@onready var boton_europa: Button = $ContenedorBotones/ContenedorBotonesEurasia/BotonEuropa
-@onready var boton_asia: Button = $ContenedorBotones/ContenedorBotonesEurasia/BotonAsia
-@onready var boton_oceania: Button = $ContenedorBotones/ContenedorBotonesAfricaOceania/BotonOceania
-@onready var boton_africa: Button = $ContenedorBotones/ContenedorBotonesAfricaOceania/BotonAfrica
 
 const MENU_PRINCIPAL = "res://Scenes/MenuPrincipal.tscn"
 const NORTEAMERICA = "res://Scenes/Levels/Norteamerica.tscn"

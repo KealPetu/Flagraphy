@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmhnv1bag0t63"]
+[gd_scene load_steps=6 format=3 uid="uid://cmhnv1bag0t63"]
 
 [ext_resource type="StyleBox" uid="uid://26ijo1rgnptr" path="res://Assets/Estilos/Botones/BotonPaises/Normal.tres" id="1_fd5v2"]
 [ext_resource type="Script" uid="uid://jutb6xqg7v64" path="res://Scripts/MenuSeleccion.gd" id="1_oxqg4"]
 [ext_resource type="StyleBox" uid="uid://ce5wnck680iyv" path="res://Assets/Estilos/Botones/BotonPaises/Pressed.tres" id="2_oxqg4"]
 [ext_resource type="Texture2D" uid="uid://b7j6kxmkhhngf" path="res://Assets/Misc/nubes.png" id="3_yubjf"]
-[ext_resource type="StyleBox" uid="uid://bvnp5be7v7sty" path="res://Assets/Estilos/Botones/BotonRegresar/Normal.tres" id="4_fd5v2"]
-[ext_resource type="StyleBox" uid="uid://oooigrg4cs3f" path="res://Assets/Estilos/Botones/BotonRegresar/Pressed.tres" id="5_oxqg4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elb0g"]
 bg_color = Color(0.9019608, 0.8627451, 0.5882353, 1)
@@ -101,7 +99,7 @@ theme_override_styles/pressed = ExtResource("2_oxqg4")
 theme_override_styles/hover = ExtResource("1_fd5v2")
 text = "Norteamérica"
 
-[node name="BotonCentroamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
+[node name="BotonAmerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
 layout_mode = 2
 size_flags_horizontal = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -112,7 +110,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = ExtResource("1_fd5v2")
 theme_override_styles/pressed = ExtResource("2_oxqg4")
 theme_override_styles/hover = ExtResource("1_fd5v2")
-text = "Centroamérica"
+text = "América"
 
 [node name="BotonSudamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
 layout_mode = 2
@@ -126,65 +124,3 @@ theme_override_styles/normal = ExtResource("1_fd5v2")
 theme_override_styles/pressed = ExtResource("2_oxqg4")
 theme_override_styles/hover = ExtResource("1_fd5v2")
 text = "Sudamérica"
-
-[node name="ContenedorBotonesEurasia" type="HBoxContainer" parent="ContenedorBotones"]
-layout_mode = 2
-alignment = 1
-
-[node name="BotonEuropa" type="Button" parent="ContenedorBotones/ContenedorBotonesEurasia"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("4_fd5v2")
-theme_override_styles/pressed = ExtResource("5_oxqg4")
-theme_override_styles/hover = ExtResource("4_fd5v2")
-text = "Europa"
-
-[node name="BotonAsia" type="Button" parent="ContenedorBotones/ContenedorBotonesEurasia"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("4_fd5v2")
-theme_override_styles/pressed = ExtResource("5_oxqg4")
-theme_override_styles/hover = ExtResource("4_fd5v2")
-text = "Asia"
-
-[node name="ContenedorBotonesAfricaOceania" type="HBoxContainer" parent="ContenedorBotones"]
-layout_mode = 2
-size_flags_vertical = 6
-alignment = 1
-
-[node name="BotonOceania" type="Button" parent="ContenedorBotones/ContenedorBotonesAfricaOceania"]
-layout_mode = 2
-size_flags_horizontal = 6
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("1_fd5v2")
-theme_override_styles/pressed = ExtResource("2_oxqg4")
-theme_override_styles/hover = ExtResource("1_fd5v2")
-text = "Oceanía"
-
-[node name="BotonAfrica" type="Button" parent="ContenedorBotones/ContenedorBotonesAfricaOceania"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 32
-theme_override_styles/normal = ExtResource("1_fd5v2")
-theme_override_styles/pressed = ExtResource("2_oxqg4")
-theme_override_styles/hover = ExtResource("1_fd5v2")
-text = "África"
