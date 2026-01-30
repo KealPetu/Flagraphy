@@ -58,25 +58,29 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -504.5
-offset_top = -232.0
-offset_right = 504.5
-offset_bottom = 450.0
+offset_left = -400.0
+offset_top = -275.0
+offset_right = 404.18506
+offset_bottom = 425.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="LabelVolumen" type="Label" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 10
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Volumen"
+horizontal_alignment = 1
 
 [node name="HSliderVolumen" type="HSlider" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 3
 value = 50.0
 
 [node name="CheckBoxTTS" type="CheckBox" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 6
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
@@ -89,15 +93,12 @@ layout_mode = 2
 
 [node name="CheckBoxDaltonismo" type="CheckBox" parent="ContenedorOpciones"]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-text = "Habilitar opciones 
-de daltonismo"
+size_flags_vertical = 6
+text = "Habilitar opciones de daltonismo"
 
 [node name="OpcionesDaltonismo" type="OptionButton" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 6
 
 [node name="LabelIntensidad" type="Label" parent="ContenedorOpciones"]
 layout_mode = 2
@@ -106,9 +107,11 @@ text = "Intensidad:"
 
 [node name="HSliderIntensidadDaltonismo" type="HSlider" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 6
 max_value = 1.0
 step = 0.1
 
 [node name="BotonRegresar" type="Button" parent="ContenedorOpciones"]
 layout_mode = 2
+size_flags_vertical = 6
 text = "Regresar"

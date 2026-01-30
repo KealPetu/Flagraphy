@@ -1,13 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://psiwbf4186pk"]
+[gd_scene load_steps=8 format=3 uid="uid://psiwbf4186pk"]
 
 [ext_resource type="Script" uid="uid://c502gmgxtw0mg" path="res://Scripts/LevelBase.gd" id="1_wrhoe"]
 [ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="2_ilmpw"]
-[ext_resource type="StyleBox" uid="uid://bvnp5be7v7sty" path="res://Assets/Estilos/Botones/BotonRegresar/Normal.tres" id="3_236eb"]
-[ext_resource type="StyleBox" uid="uid://d0qdfpckdn77k" path="res://Assets/Estilos/Botones/BotonReinicio/Normal.tres" id="3_7375l"]
-[ext_resource type="StyleBox" uid="uid://oooigrg4cs3f" path="res://Assets/Estilos/Botones/BotonRegresar/Pressed.tres" id="4_c43mv"]
-[ext_resource type="StyleBox" uid="uid://b8rqab8v7h7m5" path="res://Assets/Estilos/Botones/BotonReinicio/Hover-Pressed.tres" id="4_dci62"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ilmpw"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ufeg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_c43mv"]
 font_size = 50
@@ -39,18 +35,6 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aw1t8"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 15
-border_width_top = 15
-border_width_right = 15
-border_width_bottom = 15
-border_color = Color(0.8, 0.8, 0.8, 0)
-corner_radius_top_left = 50
-corner_radius_top_right = 50
-corner_radius_bottom_right = 50
-corner_radius_bottom_left = 50
-
 [node name="LevelBase" type="Control"]
 layout_mode = 3
 anchors_preset = 0
@@ -60,7 +44,7 @@ script = ExtResource("1_wrhoe")
 layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 75.0
-theme_override_styles/panel = SubResource("StyleBoxEmpty_ilmpw")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_1ufeg")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TopPanel"]
 custom_minimum_size = Vector2(0, 40)
@@ -89,30 +73,12 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("3_236eb")
-theme_override_styles/pressed = ExtResource("4_c43mv")
-theme_override_styles/hover = ExtResource("3_236eb")
 text = "◀ Regresar"
 
 [node name="BotonReinicio" type="Button" parent="TopPanel/HBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = ExtResource("3_7375l")
-theme_override_styles/pressed = ExtResource("4_dci62")
-theme_override_styles/hover = ExtResource("3_7375l")
-text = "Reiniciar ⟲"
+text = "⟲ Reiniciar"
 
 [node name="Puntaje" type="Label" parent="TopPanel/HBoxContainer"]
 layout_mode = 2
@@ -141,7 +107,6 @@ alignment = 1
 
 [node name="MapContainer" type="Panel" parent="HSplitContainer"]
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_aw1t8")
 
 [node name="MapaTextura" type="TextureRect" parent="HSplitContainer/MapContainer"]
 layout_mode = 0

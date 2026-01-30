@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy8bxdcjjrj7c"]
+[gd_scene load_steps=3 format=3 uid="uid://dy8bxdcjjrj7c"]
 
 [ext_resource type="Script" uid="uid://nlji2ep3ki0b" path="res://Scripts/Tutorial.gd" id="1_7bloo"]
 [ext_resource type="Texture2D" uid="uid://c4b6wx277siae" path="res://Assets/Misc/tutorial.png" id="1_wduq8"]
-[ext_resource type="StyleBox" uid="uid://d0qdfpckdn77k" path="res://Assets/Estilos/Botones/BotonReinicio/Normal.tres" id="3_rlm2d"]
-[ext_resource type="StyleBox" uid="uid://b8rqab8v7h7m5" path="res://Assets/Estilos/Botones/BotonReinicio/Hover-Pressed.tres" id="4_3j26a"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -27,12 +25,4 @@ offset_left = 107.0
 offset_top = 205.0
 offset_right = 307.0
 offset_bottom = 265.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 26
-theme_override_styles/normal = ExtResource("3_rlm2d")
-theme_override_styles/pressed = ExtResource("4_3j26a")
-theme_override_styles/hover = ExtResource("3_rlm2d")
 text = "Regresar"
