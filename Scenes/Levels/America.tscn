@@ -3,7 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://psiwbf4186pk" path="res://Scenes/Objects/LevelBase.tscn" id="1_0uaig"]
 [ext_resource type="Texture2D" uid="uid://yg25nl2oxgn4" path="res://Assets/Mapas/America.png" id="2_2uh44"]
 
-[node name="LevelBase" instance=ExtResource("1_0uaig")]
+[node name="America" instance=ExtResource("1_0uaig")]
 
 [node name="MapaTextura" parent="HSplitContainer/MapContainer" index="0"]
+offset_left = 280.0
+offset_right = 894.2
+offset_bottom = 748.0
 texture = ExtResource("2_2uh44")
+expand_mode = 1
