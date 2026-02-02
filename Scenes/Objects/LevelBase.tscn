@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://psiwbf4186pk"]
+[gd_scene format=3 uid="uid://psiwbf4186pk"]
 
 [ext_resource type="Script" uid="uid://c502gmgxtw0mg" path="res://Scripts/LevelBase.gd" id="1_wrhoe"]
 [ext_resource type="Texture2D" uid="uid://ctmydbo0736gc" path="res://icon.png" id="2_ilmpw"]
@@ -35,25 +35,33 @@ expand_margin_top = 5.0
 expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 
-[node name="LevelBase" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5htr"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[node name="LevelBase" type="Control" unique_id=2002424153]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_wrhoe")
 
-[node name="TopPanel" type="Panel" parent="."]
+[node name="TopPanel" type="Panel" parent="." unique_id=842643522]
 layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 75.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_1ufeg")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TopPanel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TopPanel" unique_id=1862706990]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 0
 offset_right = 1600.0
 offset_bottom = 40.0
 alignment = 1
 
-[node name="LogoJuego" type="TextureRect" parent="TopPanel/HBoxContainer"]
+[node name="LogoJuego" type="TextureRect" parent="TopPanel/HBoxContainer" unique_id=889112153]
 custom_minimum_size = Vector2(210, 75)
 layout_mode = 2
 size_flags_horizontal = 6
@@ -61,7 +69,7 @@ size_flags_vertical = 4
 texture = ExtResource("2_ilmpw")
 expand_mode = 1
 
-[node name="Nivel" type="Label" parent="TopPanel/HBoxContainer"]
+[node name="Nivel" type="Label" parent="TopPanel/HBoxContainer" unique_id=1819460708]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "País Actual"
@@ -69,18 +77,18 @@ label_settings = SubResource("LabelSettings_c43mv")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BotonRegresar" type="Button" parent="TopPanel/HBoxContainer"]
+[node name="BotonRegresar" type="Button" parent="TopPanel/HBoxContainer" unique_id=628515420]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "◀ Regresar"
 
-[node name="BotonReinicio" type="Button" parent="TopPanel/HBoxContainer"]
+[node name="BotonReinicio" type="Button" parent="TopPanel/HBoxContainer" unique_id=903547540]
 layout_mode = 2
 size_flags_vertical = 4
 text = "⟲ Reiniciar"
 
-[node name="Puntaje" type="Label" parent="TopPanel/HBoxContainer"]
+[node name="Puntaje" type="Label" parent="TopPanel/HBoxContainer" unique_id=728434452]
 layout_mode = 2
 size_flags_horizontal = 10
 theme_override_font_sizes/font_size = 20
@@ -89,24 +97,27 @@ label_settings = SubResource("LabelSettings_aw1t8")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
+[node name="HSplitContainer" type="HSplitContainer" parent="." unique_id=1431431858]
 layout_mode = 0
 offset_top = 150.0
 offset_right = 1600.0
 offset_bottom = 900.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="HSplitContainer" unique_id=898199826]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jp55m")
+follow_focus = true
+draw_focus_border = true
 
-[node name="FlagContainer" type="VBoxContainer" parent="HSplitContainer/ScrollContainer"]
+[node name="FlagContainer" type="VBoxContainer" parent="HSplitContainer/ScrollContainer" unique_id=1406345505]
 layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="MapContainer" type="Panel" parent="HSplitContainer"]
+[node name="MapContainer" type="Panel" parent="HSplitContainer" unique_id=672831467]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_r5htr")
 
-[node name="MapaTextura" type="TextureRect" parent="HSplitContainer/MapContainer"]
+[node name="MapaTextura" type="TextureRect" parent="HSplitContainer/MapContainer" unique_id=1835901559]
 layout_mode = 0

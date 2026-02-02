@@ -7,7 +7,7 @@ extends Control
 
 var escena_tutorial = "res://Scenes/Tutorial.tscn"
 var escena_configuraciones = "res://Scenes/Configuraciones.tscn"
-var escena_seleccion_nivel_pais = "res://Scenes/MenuSeleccion.tscn"
+var escena_seleccion_nivel_pais = "res://Scenes/Levels/America.tscn"
 
 func _ready() -> void:
 	boton_como_jugar.pressed.connect(cambiar_escena_tutorial)

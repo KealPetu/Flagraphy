@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmhnv1bag0t63"]
+[gd_scene format=3 uid="uid://cmhnv1bag0t63"]
 
 [ext_resource type="Script" uid="uid://jutb6xqg7v64" path="res://Scripts/MenuSeleccion.gd" id="1_oxqg4"]
 [ext_resource type="Texture2D" uid="uid://b7j6kxmkhhngf" path="res://Assets/Misc/nubes.png" id="3_yubjf"]
@@ -9,7 +9,7 @@ corner_radius_bottom_left = 20
 expand_margin_left = 20.0
 expand_margin_bottom = 20.0
 
-[node name="MenuSeleccion" type="Control"]
+[node name="MenuSeleccion" type="Control" unique_id=193698151]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_oxqg4")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=2006218389]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -31,7 +31,7 @@ theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxFlat_elb0g")
 text = "Elige un continente para empezar a jugar"
 
-[node name="BotonRegresar" type="Button" parent="."]
+[node name="BotonRegresar" type="Button" parent="." unique_id=1665567211]
 layout_mode = 0
 offset_left = 67.0
 offset_top = 51.0
@@ -40,7 +40,7 @@ offset_bottom = 101.0
 text = "Regresar
 "
 
-[node name="Nubes" type="TextureRect" parent="."]
+[node name="Nubes" type="TextureRect" parent="." unique_id=1210815315]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -56,7 +56,7 @@ grow_vertical = 0
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("3_yubjf")
 
-[node name="ContenedorBotones" type="VBoxContainer" parent="."]
+[node name="ContenedorBotones" type="VBoxContainer" parent="." unique_id=966615460]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -71,22 +71,22 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="ContenedorBotonesAmericas" type="HBoxContainer" parent="ContenedorBotones"]
+[node name="ContenedorBotonesAmericas" type="HBoxContainer" parent="ContenedorBotones" unique_id=1281546279]
 layout_mode = 2
 size_flags_vertical = 6
 alignment = 1
 
-[node name="BotonNorteamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
+[node name="BotonNorteamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas" unique_id=1478284861]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "Norteamérica"
 
-[node name="BotonAmerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
+[node name="BotonAmerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas" unique_id=446133945]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "América"
 
-[node name="BotonSudamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas"]
+[node name="BotonSudamerica" type="Button" parent="ContenedorBotones/ContenedorBotonesAmericas" unique_id=205558943]
 layout_mode = 2
 size_flags_horizontal = 6
 text = "Sudamérica"

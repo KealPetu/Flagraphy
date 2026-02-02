@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3thuut30k5dn"
-path="res://.godot/imported/Estados-Unidos.svg-9faf32d68c8f1e12e60f6bb9406aebea.ctex"
+uid="uid://c8telrs0f0rc1"
+path="res://.godot/imported/Argentina.svg-a736ddb024ca98a5095f488d6da70df4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Banderas/Norte America/Estados-Unidos.svg"
-dest_files=["res://.godot/imported/Estados-Unidos.svg-9faf32d68c8f1e12e60f6bb9406aebea.ctex"]
+source_file="res://Assets/Banderas/America/Argentina.svg"
+dest_files=["res://.godot/imported/Argentina.svg-a736ddb024ca98a5095f488d6da70df4.ctex"]
 
 [params]
 

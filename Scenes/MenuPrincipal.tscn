@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://gtrphdsby76q"]
+[gd_scene format=3 uid="uid://gtrphdsby76q"]
 
 [ext_resource type="Texture2D" uid="uid://deahqm81a21k2" path="res://Assets/Misc/Planeta.png" id="1_3k1ur"]
 [ext_resource type="Script" uid="uid://bnfike8dmycom" path="res://Scripts/MenuPrincipal.gd" id="1_vtrnu"]
@@ -21,7 +21,7 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8kh3b"]
 
-[node name="MenuPrincipal" type="Control"]
+[node name="MenuPrincipal" type="Control" unique_id=683482328]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,7 +30,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vtrnu")
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="." unique_id=1845008818]
 layout_mode = 1
 offset_left = 30.0
 offset_right = 656.0
@@ -38,7 +38,7 @@ offset_bottom = 224.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_bt1tr")
 
-[node name="Nubes" type="TextureRect" parent="."]
+[node name="Nubes" type="TextureRect" parent="." unique_id=517132190]
 layout_mode = 0
 offset_left = 342.0
 offset_top = 682.0
@@ -46,7 +46,7 @@ offset_right = 1392.0
 offset_bottom = 1032.0
 texture = ExtResource("3_l10t8")
 
-[node name="Planeta" type="TextureRect" parent="."]
+[node name="Planeta" type="TextureRect" parent="." unique_id=626660292]
 layout_mode = 0
 offset_left = -267.0
 offset_top = 565.0
@@ -56,7 +56,7 @@ rotation = -0.36651915
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_3k1ur")
 
-[node name="Buho" type="TextureRect" parent="."]
+[node name="Buho" type="TextureRect" parent="." unique_id=744525433]
 layout_mode = 0
 offset_left = 996.0
 offset_top = 331.00006
@@ -68,7 +68,7 @@ pivot_offset = Vector2(512, 512)
 texture = ExtResource("2_bt1tr")
 flip_h = true
 
-[node name="Descripcion" type="Label" parent="."]
+[node name="Descripcion" type="Label" parent="." unique_id=801294511]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -89,7 +89,7 @@ text = "Explora Continentes, descubre países y datos curiosos.
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Opciones" type="VBoxContainer" parent="."]
+[node name="Opciones" type="VBoxContainer" parent="." unique_id=1240343221]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -104,7 +104,7 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="NombreLabel" type="Label" parent="Opciones"]
+[node name="NombreLabel" type="Label" parent="Opciones" unique_id=370625094]
 layout_mode = 2
 size_flags_vertical = 10
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -113,7 +113,7 @@ text = "Nombre"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="NombreLineEdit" type="LineEdit" parent="Opciones"]
+[node name="NombreLineEdit" type="LineEdit" parent="Opciones" unique_id=1595175963]
 layout_mode = 2
 size_flags_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -123,17 +123,17 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8kh3b")
 placeholder_text = "Ingresa tu nombre..."
 alignment = 1
 
-[node name="BotonJugar" type="Button" parent="Opciones"]
+[node name="BotonJugar" type="Button" parent="Opciones" unique_id=713597445]
 layout_mode = 2
 size_flags_vertical = 10
 text = "Jugar"
 
-[node name="BotonConfiguraciones" type="Button" parent="Opciones"]
+[node name="BotonConfiguraciones" type="Button" parent="Opciones" unique_id=110934209]
 layout_mode = 2
 size_flags_vertical = 6
 text = "Configuraciones"
 
-[node name="BotonComoJugar" type="Button" parent="Opciones"]
+[node name="BotonComoJugar" type="Button" parent="Opciones" unique_id=91314806]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 10

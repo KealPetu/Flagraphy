@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc5efa2jioe8s"
-path="res://.godot/imported/Mexico.svg-4227499f86b40a1483153f6d9817e28c.ctex"
+uid="uid://dx047i27u0p30"
+path="res://.godot/imported/Venezuela.svg-962b8eba407d91cd0ab4acf36a53218a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Banderas/Norte America/Mexico.svg"
-dest_files=["res://.godot/imported/Mexico.svg-4227499f86b40a1483153f6d9817e28c.ctex"]
+source_file="res://Assets/Banderas/America/Venezuela.svg"
+dest_files=["res://.godot/imported/Venezuela.svg-962b8eba407d91cd0ab4acf36a53218a.ctex"]
 
 [params]
 
