@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvdl00w5f18i"]
+[gd_scene format=3 uid="uid://bvdl00w5f18i"]
 
 [ext_resource type="Texture2D" uid="uid://deahqm81a21k2" path="res://Assets/Misc/Planeta.png" id="1_3k1ur"]
 [ext_resource type="Script" uid="uid://cvsvwiajidpkk" path="res://Scripts/MenuInicio.gd" id="1_vtrnu"]
@@ -7,7 +7,7 @@
 [ext_resource type="StyleBox" uid="uid://d0qdfpckdn77k" path="res://Assets/Estilos/Botones/BotonReinicio/Normal.tres" id="4_8kh3b"]
 [ext_resource type="StyleBox" uid="uid://b8rqab8v7h7m5" path="res://Assets/Estilos/Botones/BotonReinicio/Hover-Pressed.tres" id="5_vtrnu"]
 
-[node name="MenuInicio" type="Control"]
+[node name="MenuInicio" type="Control" unique_id=1231462124]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,7 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vtrnu")
 
-[node name="Planeta" type="TextureRect" parent="."]
+[node name="Planeta" type="TextureRect" parent="." unique_id=2083735644]
 layout_mode = 0
 offset_left = -267.0
 offset_top = 656.00006
@@ -26,8 +26,8 @@ rotation = -0.36651915
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_3k1ur")
 
-[node name="Fondo" type="TextureRect" parent="."]
-self_modulate = Color(1, 1, 1, 0.49019608)
+[node name="Fondo" type="TextureRect" parent="." unique_id=420256198]
+self_modulate = Color(1, 1, 1, 0.19607843)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -44,7 +44,7 @@ scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(512, 512)
 texture = ExtResource("2_wvohi")
 
-[node name="Logo" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="." unique_id=709276344]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -56,7 +56,7 @@ offset_bottom = 244.0
 grow_horizontal = 2
 texture = ExtResource("3_bt1tr")
 
-[node name="BotonInicio" type="Button" parent="."]
+[node name="BotonInicio" type="Button" parent="." unique_id=472233810]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -78,3 +78,18 @@ theme_override_styles/normal = ExtResource("4_8kh3b")
 theme_override_styles/pressed = ExtResource("5_vtrnu")
 theme_override_styles/hover = ExtResource("4_8kh3b")
 text = "▶︎ Jugar"
+
+[node name="Label" type="Label" parent="." unique_id=1576381657]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 57
+text = "¡PON A PRUEBA TU
+CONOCIMIENTO SOBRE EL 
+MUNDO!"
+horizontal_alignment = 1
+vertical_alignment = 1
