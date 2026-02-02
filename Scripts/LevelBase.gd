@@ -9,7 +9,7 @@ class_name LevelBase extends Control
 @onready var boton_reinicio: Button = $TopPanel/HBoxContainer/BotonReinicio
 
 var flag_scene = preload("res://Scenes/Objects/Flag.tscn") # Ajusta tu ruta si cambió
-const MENU_SELECCION = "res://Scenes/MenuSeleccion.tscn"
+const MENU_PRINCIPAL = "res://Scenes/MenuPrincipal.tscn"
 
 const POINTS_PER_COUNTRY = 10
 var score = 0
@@ -124,4 +124,4 @@ func _on_reset_button_pressed():
 	get_tree().reload_current_scene()
 
 func cambiar_escena_menu_seleccion():
-	get_tree().change_scene_to_file(MENU_SELECCION)
+	get_tree().change_scene_to_file(MENU_PRINCIPAL)
